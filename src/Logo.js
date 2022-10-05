@@ -4,7 +4,7 @@ import logo from './logo.svg';
 
 const spin = keyframes`
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(-360deg); }
 `;
 
 export const Logo = props => {

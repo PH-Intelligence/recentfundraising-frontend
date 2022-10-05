@@ -31,6 +31,7 @@ import {
 } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import Recentlogo from './recentlogo.svg';
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Newsletter from "./components/Newsletter";

@@ -24,6 +24,7 @@ import {
 } from '@chakra-ui/icons';
 import { useColorMode } from '@chakra-ui/react';
 import {FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa'
+import Recentlogo from '../recentlogo.svg';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -57,11 +58,12 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          <img src={Recentlogo} className="logo" width ="28" display="flex" alignItems="center" justifyContent="center" alt="Logo"/>
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
-            <Heading ml="8" size="md" fontWeight='semibold' color="black.400"> Fundraise Data</Heading>
+            <Heading ml="1" size="md" fontWeight='bold' color="black.400"> recentfundraising</Heading>
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -87,10 +89,10 @@ export default function WithSubnavigation() {
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'blue.400'}
+            bg={'green.400'}
             href={'#'}
             _hover={{
-              bg: 'blue.300',
+              bg: 'green.300',
             }}>
             Sign Up
           </Button>
@@ -160,12 +162,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('blue.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('green.50', 'gray.900') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'blue.400' }}
+            _groupHover={{ color: 'green.400' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -179,7 +181,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}>
-          <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={'green.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>

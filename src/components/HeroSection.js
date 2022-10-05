@@ -22,7 +22,7 @@ import {
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
             Fundraise data{' '}
-            <Text as={'span'} color={'blue.400'}>
+            <Text as={'span'} color={'green.400'}>
               at your fingertips
             </Text>
           </Heading>
@@ -34,9 +34,9 @@ import {
             <Button
               rounded={'full'}
               px={6}
-              colorScheme={'blue'}
-              bg={'blue.400'}
-              _hover={{ bg: 'blue.500' }}>
+              colorScheme={'green'}
+              bg={'green.400'}
+              _hover={{ bg: 'green.500' }}>
               Sign up
             </Button>
             <Button rounded={'full'} px={6}>

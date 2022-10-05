@@ -51,12 +51,12 @@ import {
               }}
             />
             <Button
-              bg={'blue.400'}
+              bg={'green.400'}
               rounded={'lg'}
               color={'white'}
               flex={'1 0 auto'}
-              _hover={{ bg: 'blue.500' }}
-              _focus={{ bg: 'blue.500' }}>
+              _hover={{ bg: 'green.500' }}
+              _focus={{ bg: 'green.500' }}>
               Subscribe
             </Button>
           </Stack>
