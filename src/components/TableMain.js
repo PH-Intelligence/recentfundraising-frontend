@@ -9,36 +9,50 @@ import {
     TableCaption,
     TableContainer,
   } from '@chakra-ui/react'
+import { useState, useEffect } from 'react';
+import { supabase } from '../supabaseClient'
 
-  export default function TableMain(){
+export default function TableMain(){
+
+    const [FundingRoundsDemo, setCompanies] = useState([])
+    const [company, setCompany] = useState({ company_name: ""})
+    const {id, company_name} = company
+    useEffect (() => {
+        fetchCompanies()
+    }, [])  
+
+  async function fetchCompanies() {
+    const { data } = await supabase
+    .from('FundingRoundsDemo')
+    .select()
+    setCompanies(data)
+    console.log("data: ", data)
+  }
     return (
-        <TableContainer>
-            <Table variant='simple'>
-                <Thead>
-                <Tr>
-                    <Th>Company</Th>
-                    <Th>Fundraise</Th>
-                    <Th isNumeric>Date</Th>
-                </Tr>
-                </Thead>
-                <Tbody>
-                <Tr>
-                    <Td>Company 1</Td>
-                    <Td>$25M</Td>
-                    <Td isNumeric>3 Jan, 2022</Td>
-                </Tr>
-                <Tr>
-                    <Td>Company 2</Td>
-                    <Td>$50M</Td>
-                    <Td isNumeric>5 Jan, 2022</Td>
-                </Tr>
-                <Tr>
-                    <Td>Company 3</Td>
-                    <Td>$55M</Td>
-                    <Td isNumeric>5 Jan, 2022</Td>
-                </Tr>
-                </Tbody>
-            </Table>
-        </TableContainer>
+    <TableContainer>
+        <Table variant='simple' size='sm' display='block' overflowY='hidden'>
+            <Thead>
+            <Tr>
+                <Th>Company</Th>
+                <Th>Amount</Th>
+                <Th>Round</Th>
+                <Th>Date</Th>
+            </Tr>
+            </Thead>
+            {FundingRoundsDemo.map(company => (
+            <div key = {company.id}>
+            <Tbody>
+            <Tr>
+                <Td>{company.company_name}</Td>
+                <Td>$ {company.funding_amount}</Td>
+                <Td>{company.funding_round}</Td>
+                <Td>{company.earliest_date}</Td>
+            </Tr>
+            </Tbody>
+            </div>
+            ))
+            }
+        </Table>
+    </TableContainer>
     )  
 }
