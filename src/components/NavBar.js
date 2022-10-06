@@ -57,7 +57,7 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex ml="10" flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex pl="10" flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
           <img src={Recentlogo} className="logo" width ="28" display="flex" alignItems="center" justifyContent="center" alt="Logo"/>
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
