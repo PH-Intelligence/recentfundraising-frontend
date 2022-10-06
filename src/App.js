@@ -46,8 +46,6 @@ import NavBar from "./components/NavBar";
 import Newsletter from "./components/Newsletter";
 import HeroSection from "./components/HeroSection";
 import TableMain from "./components/TableMain";
-import { useState, useEffect } from 'react';
-import { supabase } from './supabaseClient'
 
 function App() {
 
@@ -73,12 +71,6 @@ function App() {
         <NavBar></NavBar>
           <Spacer></Spacer>
       </Flex>
-      {/* Nader's stuff */}
-      <Flex>
-        
-
-      </Flex>
-      {/* end nader */}
       <Flex>
         <HeroSection></HeroSection>
       </Flex>
