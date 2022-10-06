@@ -22,6 +22,15 @@ import {
   Code,
   Grid,
   theme,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -37,15 +46,39 @@ import NavBar from "./components/NavBar";
 import Newsletter from "./components/Newsletter";
 import HeroSection from "./components/HeroSection";
 import TableMain from "./components/TableMain";
+import { useState, useEffect } from 'react';
+import { supabase } from './supabaseClient'
 
 function App() {
 
+  
+
   return (
+    // <div className = "App">
+    //   {
+    //     FundingRoundsDemo.map(company => (
+    //       <div key = {company.id}>
+    //         <h3>{company.company_name}</h3>
+    //         <h3>{company.Currency}</h3>
+    //         <h3>{company.funding_round}</h3>
+    //         <h3>{company.funding_amount}</h3>
+    //       </div>
+    //       ))
+    //   }
+    // </div>
+  // );
+
     <VStack p={5}>
       <Flex>
         <NavBar></NavBar>
           <Spacer></Spacer>
       </Flex>
+      {/* Nader's stuff */}
+      <Flex>
+        
+
+      </Flex>
+      {/* end nader */}
       <Flex>
         <HeroSection></HeroSection>
       </Flex>
