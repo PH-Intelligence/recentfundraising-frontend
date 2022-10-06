@@ -33,10 +33,10 @@ export default function TableMain(){
         <Table variant='simple' size='sm' display='block' overflowY='hidden'>
             <Thead>
             <Tr>
-                <Th>Company</Th>
+                <Th>Date</Th>
                 <Th>Amount</Th>
                 <Th>Round</Th>
-                <Th>Date</Th>
+                <Th>Company</Th>
             </Tr>
             </Thead>
             {FundingRoundsDemo.map(company => (
