@@ -43,10 +43,10 @@ export default function TableMain(){
             <div key = {company.id}>
             <Tbody>
             <Tr>
-                <Td>{company.company_name}</Td>
+                <Td>{company.earliest_date}</Td>
                 <Td>$ {company.funding_amount}</Td>
                 <Td>{company.funding_round}</Td>
-                <Td>{company.earliest_date}</Td>
+                <Td>{company.company_name}</Td>
             </Tr>
             </Tbody>
             </div>
