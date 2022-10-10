@@ -41,7 +41,6 @@ import {
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import Recentlogo from './recentlogo.svg';
-import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Newsletter from "./components/Newsletter";
 import HeroSection from "./components/HeroSection";
@@ -74,13 +73,13 @@ function App() {
       <Flex>
         <HeroSection></HeroSection>
       </Flex>
+
       <Flex>
         <TableMain></TableMain>
       </Flex>
       <Flex>
         <Newsletter></Newsletter>
       </Flex>
-      <Header></Header>
     </VStack>
   );
 }

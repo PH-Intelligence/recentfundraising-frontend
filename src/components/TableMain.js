@@ -30,7 +30,7 @@ export default function TableMain(){
   }
     return (
     <TableContainer>
-        <Table variant='simple' size='sm' display='block' overflowY='hidden'>
+        <Table variant='simple' >
             <Thead>
             <Tr>
                 <Th>Date</Th>
@@ -40,16 +40,14 @@ export default function TableMain(){
             </Tr>
             </Thead>
             {FundingRoundsDemo.map(company => (
-            <div key = {company.id}>
             <Tbody>
             <Tr>
-                <Td>{company.earliest_date}</Td>
-                <Td>$ {company.funding_amount}</Td>
-                <Td>{company.funding_round}</Td>
-                <Td>{company.company_name}</Td>
+                <Td >{company.earliest_date}</Td>
+                <Td >$ {company.funding_amount}</Td>
+                <Td >{company.funding_round}</Td>
+                <Td >{company.company_name}</Td>
             </Tr>
             </Tbody>
-            </div>
             ))
             }
         </Table>
