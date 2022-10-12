@@ -25,6 +25,7 @@ export default function TableMain(){
     const { data } = await supabase
     .from('FundingRoundsDemo')
     .select()
+    .order('earliest_date', {ascending: false})
     setCompanies(data)
     console.log("data: ", data)
   }
